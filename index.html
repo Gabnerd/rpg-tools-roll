@@ -14,15 +14,71 @@
 </head>
 
 <body>
-       <div class="container">
-           <h1 class="mt-5">Basic Template </h1>
-           <p class="lead">Simple template to start your design with</p>
-       </div>
-
+    <div class="container mt-3">
+        <div class="row" id="ficha">
+            <div class=" col-md-2">
+                <div class="form-group">
+                    <label onclick="teste(this.attributes.for.value)" for="forca">Força</label>
+                    <input type="number" onchange="onChangeValue(this.attributes.name.value)" name="forca" id="forca" class="form-control" placeholder="5">
+                </div>
+                <div class="form-group">
+                    <label onclick="teste(this.attributes.for.value)" for="tecnica">Tecnica</label>
+                    <input type="number" onchange="onChangeValue(this.attributes.name.value)" name="tecnica" id="tecnica" class="form-control" placeholder="5">
+                </div>
+                <div class="form-group">
+                  <label onclick="teste(this.attributes.for.value)" for="conhecimento">Conhecimento</label>
+                  <input type="number" onchange="onChangeValue(this.attributes.name.value)" name="conhecimento" id="conhecimento" class="form-control" placeholder="5">
+                </div>
+            </div>
+            <div class=" col-md-2">
+                <div class="form-group">
+                    <label onclick="teste(this.attributes.for.value)" for="constituicao">Constituição</label>
+                    <input type="number" onchange="onChangeValue(this.attributes.name.value)" name="constituicao" id="constituicao" class="form-control" placeholder="5">
+                </div>
+                <div class="form-group">
+                    <label onclick="teste(this.attributes.for.value)" for="mentalidade">Mentalidade</label>
+                    <input type="number" onchange="onChangeValue(this.attributes.name.value)" name="mentalidade" id="mentalidade" class="form-control" placeholder="5">
+                </div>
+            </div>
+            <div class=" col-md-2">
+                <div class="form-group">
+                  <label for="sani">Sanidade</label>
+                  <input type="number" onchange="onChangeValue(this.attributes.name.value)" name="sani" id="sani" class="form-control" placeholder="100">
+                </div>
+            </div>
+            <div class=" col-md-2">
+                <div class="form-group">
+                  <label onclick="teste(this.attributes.for.value)" for="armadura">Armadura</label>
+                  <input type="number" onchange="onChangeValue(this.attributes.name.value)" name="armadura" id="armadura" class="form-control" placeholder="0">
+                </div>
+                <div class="form-group">
+                    <label onclick="teste(this.attributes.for.value)" for="tamanho">Tamanho</label>
+                    <input type="number" onchange="onChangeValue(this.attributes.name.value)" name="tamanho" id="tamanho" class="form-control" placeholder="0">
+                  </div>
+                  <div class="form-group">
+                    <label onclick="teste(this.attributes.for.value)" for="movimento">Movimento</label>
+                    <input type="number" onchange="onChangeValue(this.attributes.name.value)" name="movimento" id="movimento" class="form-control" placeholder="0">
+                  </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md">
+                <button type="button" class="btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5" id="ataques">
+        <h3>Ataques:</h3>
+        <button type="button" class="btn btn-primary" class="diceroll" onclick="calcAtaque(this.attributes.ataqueCalc.value, this.attributes.ataqueRoll.value)" ataqueCalc="((100-ficha.sani)/5)d6" ataqueRoll="1d6" ataque-id="1">Ataque microbots</button>
+    </div>
+    <div class="container mt-4" id="display">
+        <h3 id="rolagemPrimaria"></h3>
+        <h3 id="rolagemDano"></h3>
+    </div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="js/index.scripts.js"></script>
 </body>
 
